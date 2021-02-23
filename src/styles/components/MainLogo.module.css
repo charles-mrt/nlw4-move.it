@@ -1,0 +1,17 @@
+.mainLogo {
+    width: 100%;   
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.logo {
+    width: 20rem;
+    transition: 0.2s;
+}
+
+@media(max-width: 720px) {
+
+    img.logo {        
+        width: 15rem;        
+    }
+}
