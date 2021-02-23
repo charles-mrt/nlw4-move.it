@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NWL4 projeto Move It
 
-## Getting Started
+Sistema criado durante a semana Nwl4 ministrado pela RocketSeat
+ - 2ª aula foi utilizado tecnologias como ReactJs, Next.Js, TypeScript, Css.
+ 
+ - Desenvolvimento aula 2:
+  -  criação - campo usuário e contador de tempo.
+  -  botão inicar contador em desenvolvimento.
+ 
+ - Modificações em relação ao projeto principal:
+  - alterado o layout do projeto e cores.
+  - criação da logo.
+  - adicionado variável para controle do título do botão.
 
-First, run the development server:
+## Objetivo
+O sistema desenvolvido tem por objeto alertar o usuário a fazer uma pausa dae suas tarefas a cada ciclo de tempo. Assim o usuário realizar exercícios físicos ganhando pontos definidos em XP a cada atividade realizada.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<p align="center"><h1>Home - 1º projeto - em desenvolvimento</h1>
+  <img src="https://i.ibb.co/cLb2KGt/Home-custom.jpg" alt="Home-custom" border="0">
+</p>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Scripts Disponíveis
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+No diretório do projeto através do terminal, você pode executar o comando abaixo para criar sua aplicação utilizando typeScript:
+yarn add typescript @types/react @types/react-dom @types/node -D
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### `yarn dev`
+Executa o aplicativo no modo de desenvolvimento. \
+Abra [http: // localhost: 3000] (http: // localhost: 3000) para visualizá-lo no navegador.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+A página será recarregada se você fizer edições. \
+Você também verá quaisquer erros de lint no console.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
