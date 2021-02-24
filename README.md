@@ -22,8 +22,10 @@ O sistema desenvolvido tem por objeto alertar o usuário a fazer uma pausa de su
 
 ## Scripts Disponíveis
 
-No diretório do projeto através do terminal, você pode executar o comando abaixo para criar sua aplicação utilizando typeScript:
-yarn add typescript @types/react @types/react-dom @types/node -D
+No diretório do projeto através do terminal, você pode executar o comando abaixo para criar sua aplicação utilizando:
+<strong>yarn create next-app move-it-next</strong>
+Dentro de sua aplicação instale as dependencias
+<strong>yarn add typescript @types/react @types/react-dom @types/node -D</strong>
 
 ### `yarn dev`
 Executa o aplicativo no modo de desenvolvimento. \
