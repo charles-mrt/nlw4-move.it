@@ -7,11 +7,11 @@
 :root {
     --white:#fff;
     --background: #f2f3f5;
-    --background-bar: #2e384d;
+    --background-dark: #2e384d;
     --gray-line: #dcdde0;
     --text: #666666;
     --Text-highlight: #b3b9ff;
-    --tittle: #2e384d;
+    --title: #2e384d;
     --red: #e83f5b;
     --green: #4cd62b;
     --blue: #5965e0;

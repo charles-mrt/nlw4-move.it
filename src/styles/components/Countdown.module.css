@@ -4,7 +4,7 @@
     
     font-family: Rajdhani;
     font-weight: 600;
-    color: var(--tittle);
+    color: var(--title);
 }
 .countdownContainer > div {
     flex: 1;
@@ -57,15 +57,22 @@
     transition: background-color 0.2s;
 }
 
-.countdownButton:hover {
+.countdownButton:not(:disabled):hover {
     background: var(--blue-dark);
 }
 
 .countdownButtonActive {
     background: var(--white);
-    color: var(--tittle);
+    color: var(--title);
 }
-.countdownButtonActive:hover {
+.countdownButtonActive:not(:disabled):hover {
     background: var(--red);
     color: var(--white);
+}
+
+.countdownButton:disabled {
+    background: var(--white);
+    color: var(--text);
+    cursor: not-allowed;
+    border-bottom: 2px solid var(--green);
 }
