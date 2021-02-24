@@ -1,6 +1,6 @@
-# <nLw4> projeto Move It
+# nLw4 projeto Move It
 
-Sistema criado durante a semana <nLw4> ministrado pela RocketSeat
+Sistema criado durante a semana nLw4 ministrado pela RocketSeat
  - 2ª aula foi utilizado tecnologias como ReactJs, Next.Js, TypeScript, Css.
  
  - Desenvolvimento aula 2:
