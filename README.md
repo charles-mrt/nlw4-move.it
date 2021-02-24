@@ -24,9 +24,7 @@ O sistema desenvolvido tem por objeto alertar o usuário a fazer uma pausa de su
 
 No diretório do projeto através do terminal, você pode executar o comando abaixo para criar sua aplicação utilizando:
 - <strong> yarn create next-app move-it-next</strong>
-
-<p>Dentro de sua aplicação instale as dependencias</p>
-- <strong> yarn create next-app move-it-next</strong>
+- Dentro de sua aplicação instale as dependencias</p>
 - <strong> yarn add typescript @types/react @types/react-dom @types/node -D</strong>
 
 
