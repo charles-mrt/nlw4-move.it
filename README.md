@@ -26,6 +26,7 @@ No diretório do projeto através do terminal, você pode executar o comando aba
 - <strong> yarn create next-app move-it-next</strong>
 
 <p>Dentro de sua aplicação instale as dependencias</p>
+- <strong> yarn create next-app move-it-next</strong>
 - <strong> yarn add typescript @types/react @types/react-dom @types/node -D</strong>
 
 
