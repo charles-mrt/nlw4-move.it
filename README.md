@@ -1,6 +1,6 @@
 # NWL4 projeto Move It
 
-Sistema criado durante a semana Nwl4 ministrado pela RocketSeat
+Sistema criado durante a semana <nLw4> ministrado pela RocketSeat
  - 2ª aula foi utilizado tecnologias como ReactJs, Next.Js, TypeScript, Css.
  
  - Desenvolvimento aula 2:
@@ -13,7 +13,7 @@ Sistema criado durante a semana Nwl4 ministrado pela RocketSeat
   - adicionado variável para controle do título do botão.
 
 ## Objetivo
-O sistema desenvolvido tem por objeto alertar o usuário a fazer uma pausa dae suas tarefas a cada ciclo de tempo. Assim o usuário realizar exercícios físicos ganhando pontos definidos em XP a cada atividade realizada.
+O sistema desenvolvido tem por objeto alertar o usuário a fazer uma pausa de suas tarefas a cada ciclo de tempo. Assim o usuário realizar exercícios físicos ganhando pontos definidos em XP a cada atividade realizada.
 
 
 <p align="center"><h1>Home - 1º projeto - em desenvolvimento</h1>
