@@ -28,6 +28,7 @@ No diretório do projeto através do terminal, você pode executar o comando aba
 <p>Dentro de sua aplicação instale as dependencias</p>
 - <strong> yarn add typescript @types/react @types/react-dom @types/node -D</strong>
 
+
 ### `yarn dev`
 Executa o aplicativo no modo de desenvolvimento. \
 Abra [http: // localhost: 3000] (http: // localhost: 3000) para visualizá-lo no navegador.
