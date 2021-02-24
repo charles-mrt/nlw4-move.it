@@ -1,7 +1,7 @@
 # nLw4 projeto Move It
 
 Sistema criado durante a semana nLw4 ministrado pela RocketSeat
- - 3ª aula foi utilizado tecnologias como ReactJs, Next.Js, TypeScript, Css.
+ - Fase 3 foi utilizado tecnologias como ReactJs, Next.Js, TypeScript, Css.
  
  - Desenvolvimento aula 3:
   -  criação - campo usuário e contador de tempo.
