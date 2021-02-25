@@ -1,16 +1,16 @@
 # nLw4 projeto Move It
 
 Sistema criado durante a semana nLw4 ministrado pela RocketSeat
- - 2ª aula foi utilizado tecnologias como ReactJs, Next.Js, TypeScript, Css.
+ - Fase 3 foi utilizado tecnologias como ReactJs, Next.Js, TypeScript, Css.
  
- - Desenvolvimento aula 2:
+ - Desenvolvimento aula 3:
   -  criação - campo usuário e contador de tempo.
   -  botão inicar contador em desenvolvimento.
+  -  Campo com desafios e conquistas
  
  - Modificações em relação ao projeto principal:
   - alterado o layout do projeto e cores.
   - criação da logo.
-  - adicionado variável para controle do título do botão.
 
 ## Objetivo
 O sistema desenvolvido tem por objeto alertar o usuário a fazer uma pausa de suas tarefas a cada ciclo de tempo. Assim o usuário realizar exercícios físicos ganhando pontos definidos em XP a cada atividade realizada.
