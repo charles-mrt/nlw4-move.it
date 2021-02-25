@@ -5,9 +5,9 @@ import styles from '../styles/components/Countdown.module.css';
 let countdownTimeout: NodeJS.Timeout;
 
 export function Countdown() {
-    // StartTime 25 minutes = 0.25
+    // StartTime 25 minutes = 25
     // StartTime 3 seconds = 0.05
-    const startTime = 0.05 * 60; 
+    const startTime = 25 * 60; 
     const { startNewChallenge } = useContext(ChallengesContext);
 
     const [time, setTime] = useState(startTime);
