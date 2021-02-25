@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 import { CountDownContext } from '../contexts/CountdownContext';
 import styles from '../styles/components/Countdown.module.css';
-import { FiChevronsRight, FiXCircle} from "react-icons/fi";
+import { FiChevronsRight, FiXCircle, FiCheck} from "react-icons/fi";
 
       <form>
         <h1>Hello</h1>
@@ -57,7 +57,7 @@ export function Countdown() {
                  disabled
                  className={styles.countdownButton}
                 >
-                    Ciclo encerrado
+                    Ciclo encerrado <FiCheck size={"2rem"} color={"#2ecc71"}/>
                 </button>
             ) : (
                     <>
@@ -70,7 +70,7 @@ export function Countdown() {
                          Abandonar ciclo  <FiXCircle size={"2rem"}/> 
                         </button>
 
-                      ) : (
+                      ) : ( 
                         <button
                          type="button"
                          className={styles.countdownButton}

@@ -23,6 +23,6 @@ export function ExperienceBar() {
             
             <span>{experienceToNextLevel} xp</span>
         </header>
-    );
+    );  
 
 }

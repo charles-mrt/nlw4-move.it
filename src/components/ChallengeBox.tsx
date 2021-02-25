@@ -61,7 +61,7 @@ export function ChallengeBox() {
                   </button>
 
                </footer>
-            </div>
+            </div> 
 
          ) : (
                <div className={styles.challengeNotActive}>
