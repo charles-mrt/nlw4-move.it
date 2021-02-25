@@ -1,8 +1,16 @@
 import { useState, useEffect, useContext } from 'react';
 import { CountDownContext } from '../contexts/CountdownContext';
 import styles from '../styles/components/Countdown.module.css';
+import { FiChevronsRight, FiXCircle} from "react-icons/fi";
 
-
+      <form>
+        <h1>Hello</h1>
+        <p>Enter your name:</p>
+        <input
+          type="text"
+        />
+      </form>
+  
 
 export function Countdown() {
     
@@ -21,12 +29,9 @@ export function Countdown() {
     const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('')
 
 
-
-    
-
     return (
         <div>
-            <div>
+            <div>                
                 <p className={styles.alert}><small>valor inicial para TESTE: {startTime} segundos</small></p>
                                
             </div>
@@ -62,7 +67,7 @@ export function Countdown() {
                          className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
                          onClick={resetCountdown}
                         >
-                         Abandonar ciclo
+                         Abandonar ciclo  <FiXCircle size={"2rem"}/> 
                         </button>
 
                       ) : (
@@ -71,7 +76,7 @@ export function Countdown() {
                          className={styles.countdownButton}
                          onClick={startCountdown}
                         >
-                         Iniciar um ciclo
+                         Iniciar um ciclo <FiChevronsRight size={"2rem"}/> 
                         </button>
                       )}
                     </>

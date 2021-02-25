@@ -45,7 +45,11 @@ export function CountdownProvider( {children} : CountDownProviderProps ) {
       clearTimeout(countdownTimeout)
       setIsActive(false);
       setTime(startTime);
-      setHasFinished(false);
+      setHasFinished(false)
+  }
+  let timeTeste = 3;
+  function testeTime(){
+      return timeTeste;
   }
 
   useEffect(() => {
@@ -70,7 +74,6 @@ export function CountdownProvider( {children} : CountDownProviderProps ) {
          isActive,
          startCountdown,
          resetCountdown,
-
       }}>
          {children}
       </CountDownContext.Provider>

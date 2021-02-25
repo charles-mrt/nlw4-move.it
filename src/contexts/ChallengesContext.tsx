@@ -2,8 +2,6 @@ import {createContext, useState, ReactNode, useEffect} from 'react';
 
 import challenges from '../../challenges.json';
 
-import {isMobile} from 'react-device-detect';
-
 interface Challenge {
    type: 'body' | 'eye';
    description: string;
@@ -69,7 +67,6 @@ export function ChallengesProvider( {children}:ChallengesProviderProps ) {
       }
    }
     
-
    /* reset challenge if user failed */
    function resetChallenge() {
       setActiveChallenge(null);
