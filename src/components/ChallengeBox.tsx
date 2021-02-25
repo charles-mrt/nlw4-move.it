@@ -1,10 +1,34 @@
 import { useContext } from 'react';
+
 import { ChallengesContext } from '../contexts/ChallengesContext';
+import { CountDownContext } from '../contexts/CountdownContext';
+
 import styles from '../styles/components/ChallengeBox.module.css'
+
+const message = {
+   startMessage: " Go go go !!! Finaliza o ciclo para receber um desafio :)",
+   messageSucceeded:"Parabéns! E aí preparado para mais uma conquista? Iniciei um novo ciclo!",
+   messageFailed: "Que Pena! Agora vai. Iniciei um novo ciclo!"
+}
+
+let messageContext = message.startMessage;
 
 export function ChallengeBox() {
 
    const {activeChallenge, resetChallenge, completeChallenge} = useContext(ChallengesContext);
+   const {resetCountdown} = useContext(CountDownContext);
+   
+   function handleChallengeSucceeded() {
+      completeChallenge();      
+      resetCountdown();
+      messageContext = message.messageSucceeded;
+   }
+
+   function handleChallengeFailed() {      
+      resetChallenge();
+      resetCountdown();
+      messageContext = message.messageFailed;
+   }
 
    return (
       <div className={styles.challengeContainer}>
@@ -23,7 +47,7 @@ export function ChallengeBox() {
                   <button
                      type="button"
                      className={styles.challengeFailedButton}
-                     onClick={resetChallenge}                     
+                     onClick={handleChallengeFailed}                     
                   >
                      falhei :(
                   </button>
@@ -31,7 +55,7 @@ export function ChallengeBox() {
                   <button
                      type="button"
                      className={styles.challengeSucceededButton}
-                     onClick={completeChallenge}
+                     onClick={handleChallengeSucceeded}
                   >
                      Completei :)
                   </button>
@@ -42,7 +66,7 @@ export function ChallengeBox() {
          ) : (
                <div className={styles.challengeNotActive}>
                   <strong>
-                     Go go go !!!< br /> Finaliza o ciclo para receber um desafio :)
+                  {messageContext}
                </strong>
                   <p>
                      <img src="icons/level-up.svg" alt="Level Up" />

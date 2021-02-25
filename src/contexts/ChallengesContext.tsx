@@ -79,10 +79,6 @@ export function ChallengesProvider( {children}:ChallengesProviderProps ) {
       setchallengesCompleted(challengesCompleted + 1);
    }
 
-   
-
-
-
    return(
       <ChallengesContext.Provider
        value={{
