@@ -60,14 +60,12 @@ export function ChallengesProvider( {children}:ChallengesProviderProps ) {
 
       setActiveChallenge(challenge)
 
-     new Audio( '/notification.mp3').play();
+     new Audio( '/notification.mp3').play();     
 
-     
-
-      if ( !isMobile && Notification.permission === 'granted' ) {
-         new Notification( 'Novo desafio 🎉 ' ) , {
+      if ( Notification.permission === 'granted' ) {
+         new Notification( 'Novo desafio 🎉 ' , {
             body: `Valendo ${challenge.amount}xp!`            
-         }        
+         })       
       }
    }
     
