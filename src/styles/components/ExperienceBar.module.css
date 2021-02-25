@@ -30,6 +30,7 @@
     height: 4px;
     border-radius: 4px;
     background: var(--green);
+    transition: 2s;
 }
 
 span.currentExperience {
