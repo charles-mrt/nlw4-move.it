@@ -18,10 +18,13 @@ export function ChallengeBox() {
    const {activeChallenge, resetChallenge, completeChallenge} = useContext(ChallengesContext);
    const {resetCountdown} = useContext(CountDownContext);
    
+   const {autoScrollTop} = useContext(CountDownContext);
+   
    function handleChallengeSucceeded() {
       completeChallenge();      
       resetCountdown();
       messageContext = message.messageSucceeded;
+      autoScrollTop();
    }
 
    function handleChallengeFailed() {      
