@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+        
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -37,11 +39,12 @@
 
 body {
     background: var(--background);
-    color: var(--text);
+    color: var(--text);    
 }
 
 body, input, textarea, button {
     font: 400 1rem "Inter", sans-serif;
+    
 }
 
 button {
