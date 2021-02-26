@@ -31,6 +31,7 @@ export function ChallengeBox() {
       resetChallenge();
       resetCountdown();
       messageContext = message.messageFailed;
+      autoScrollTop();
    }
 
    return (
