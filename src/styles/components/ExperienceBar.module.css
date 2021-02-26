@@ -37,7 +37,9 @@ span.currentExperience {
     position: absolute;
     top: 12px;
     transform: translateX(-50%);
-    
+    padding:0;
+
     color: var(--white);  
     font-weight: bold;
+    
 }
