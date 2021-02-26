@@ -4,6 +4,7 @@ import Cookies from 'js-cookie';
 import challenges from '../../challenges.json';
 
 import { isMobile } from 'react-device-detect';
+import { LevelUpModal } from '../components/LevelUpmodal';
 
 interface Challenge {
    type: 'body' | 'eye';
@@ -17,10 +18,12 @@ interface ChallengesContextData {
    experienceToNextLevel: number;
    challengesCompleted: number;
    activeChallenge: Challenge;
+   
    levelUp: () => void;
    startNewChallenge: () => void;
    resetChallenge: () => void;
    completeChallenge: () => void;
+   closeLevelUpModal: () => void;
 }
 
 
@@ -42,6 +45,7 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
    const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0);
    const [challengesCompleted, setchallengesCompleted] = useState(rest.challengesCompleted ?? 0);
    const [activeChallenge, setActiveChallenge] = useState(null)
+   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false)
 
    /* calculation of the next level of experience based on potentiation 
       (level + 1 ) * level Dificult, square Power) 
@@ -65,6 +69,11 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
 
    function levelUp() {
       setLevel(level + 1);
+      setIsLevelUpModalOpen(true)      
+   }
+
+   function closeLevelUpModal(){
+      setIsLevelUpModalOpen(false)
    }
 
    /* get challenges randomly */
@@ -118,10 +127,13 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
             startNewChallenge,
             activeChallenge,
             resetChallenge,
-            completeChallenge
+            completeChallenge,
+            closeLevelUpModal,
          }}
       >
          {children}
+         { isLevelUpModalOpen && <LevelUpModal /> }
+         
       </ChallengesContext.Provider>
    );
 }
