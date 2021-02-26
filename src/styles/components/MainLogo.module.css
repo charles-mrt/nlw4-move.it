@@ -22,16 +22,3 @@
         width: 120px;        
     }
 }
-
-
-/*alert */
-.alertDevelopment {
-    display: flex;
-    justify-content: flex-end;
-}
-.alertDevelopment small{
-   background:#f08686;
-   color: #fff;
-   padding: 4px;
-   border-radius: 4px;
-}

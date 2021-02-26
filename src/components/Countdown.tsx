@@ -6,8 +6,7 @@ import { FiChevronsRight, FiXCircle, FiCheck} from "react-icons/fi";
 
 export function Countdown() {
     
-    const {
-        startTime,
+    const {        
         minutes, 
         seconds, 
         hasFinished, 
@@ -23,9 +22,7 @@ export function Countdown() {
 
     return (
         <div>
-            <div>                
-               {/*} <p className={styles.alert}><small>valor inicial para TESTE: {startTime} segundos</small></p>*/}
-               
+            <div>                                             
             </div>
            
             <div className={styles.countdownContainer}>
