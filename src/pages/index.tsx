@@ -28,8 +28,7 @@ export default function Home(props) {
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
     >
-      <div className={styles.container}>
-      {alert("Tempo definido para teste = 3 segundos.")}
+      <div className={styles.container}>      
         <Head> <title> Início | move.it </title></Head>
 
         <MainLogo />
