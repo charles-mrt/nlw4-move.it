@@ -29,7 +29,7 @@ export default function Home(props) {
       challengesCompleted={props.challengesCompleted}
     >
       <div className={styles.container}>
-
+      {alert("Tempo definido para teste = 3 segundos.")}
         <Head> <title> Início | move.it </title></Head>
 
         <MainLogo />

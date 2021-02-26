@@ -3,14 +3,6 @@ import { CountDownContext } from '../contexts/CountdownContext';
 import styles from '../styles/components/Countdown.module.css';
 import { FiChevronsRight, FiXCircle, FiCheck} from "react-icons/fi";
 
-      <form>
-        <h1>Hello</h1>
-        <p>Enter your name:</p>
-        <input
-          type="text"
-        />
-      </form>
-  
 
 export function Countdown() {
     
@@ -32,8 +24,8 @@ export function Countdown() {
     return (
         <div>
             <div>                
-                <p className={styles.alert}><small>valor inicial para TESTE: {startTime} segundos</small></p>
-                               
+               {/*} <p className={styles.alert}><small>valor inicial para TESTE: {startTime} segundos</small></p>*/}
+               
             </div>
            
             <div className={styles.countdownContainer}>
