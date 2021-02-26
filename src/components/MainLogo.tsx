@@ -6,7 +6,7 @@ export function MainLogo() {
         <>             
             <div className={ styles.mainLogo }>            
                 <img src="/assets/logo.svg" alt="MoveIT" className={styles.logo}/>
-                <small>tempo de teste 3seg</small>
+                <small>Em desenvolvimento - time teste 0:3s</small>
             </div>
         </>
     );
