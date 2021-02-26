@@ -10,7 +10,8 @@ interface CountDownContextData {
    isActive: boolean,
    startCountdown: () => void;
    resetCountdown: () => void;
-
+   autoScrollBottom: () => void;
+   autoScrollTop: () => void;
 }
 
 interface CountDownProviderProps {
@@ -40,8 +41,12 @@ export function CountdownProvider( {children} : CountDownProviderProps ) {
     function startCountdown() {
       setIsActive(true);
   }
-  function AutoScroll(){
-    window.scrollTo(0,  document.body.scrollHeight);
+
+  function autoScrollBottom(){
+    const scrollBottom = window.scrollTo(0, document.body.scrollHeight);
+  }                                     
+  function autoScrollTop(){
+    const scrollBottom = window.scrollTo(0,0);
   }
 
   function resetCountdown() {
@@ -62,7 +67,7 @@ export function CountdownProvider( {children} : CountDownProviderProps ) {
           setHasFinished(true);
           setIsActive(false);
           startNewChallenge();
-          AutoScroll();
+          autoScrollBottom();
         }
 
   }, [isActive, time])
@@ -76,6 +81,8 @@ export function CountdownProvider( {children} : CountDownProviderProps ) {
          isActive,
          startCountdown,
          resetCountdown,
+         autoScrollBottom,
+         autoScrollTop,
       }}>
          {children}
       </CountDownContext.Provider>
