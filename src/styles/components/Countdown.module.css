@@ -92,18 +92,6 @@
     border-bottom: 2px solid var(--green);
 }
 
-/* for test */
-.alert {
-    margin: 0 0 2rem 0;
-}
-.alert small {    
-    background: #f08686;
-    color: white;
-    padding: 4px;
-    border-radius: 4px;
-}
-
-
 @media(max-width: 420px) {
     .countdownButton {
         margin-top: 0.5rem;
