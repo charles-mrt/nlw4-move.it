@@ -35,11 +35,24 @@
 
 span.currentExperience {
     position: absolute;
+    padding:0.2rem;
     top: 12px;
-    transform: translateX(-50%);
-    
-    color: var(--white);  
-    font-weight: bold;
+    transform: translateX(-50%);      
+    border-radius: 3px;
 
-    
+    font-weight: bold;
+    text-align: center;
+    color: var(--white);  
+    background: var(--blue);
+  
+}
+span.currentExperience:before{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent  var(--blue) transparent ;
 }
