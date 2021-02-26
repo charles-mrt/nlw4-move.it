@@ -40,6 +40,9 @@ export function CountdownProvider( {children} : CountDownProviderProps ) {
     function startCountdown() {
       setIsActive(true);
   }
+  function AutoScroll(){
+    window.scrollTo(0,  document.body.scrollHeight);
+  }
 
   function resetCountdown() {
       clearTimeout(countdownTimeout)
@@ -47,22 +50,21 @@ export function CountdownProvider( {children} : CountDownProviderProps ) {
       setTime(startTime);
       setHasFinished(false)
   }
-  let timeTeste = 3;
-  function testeTime(){
-      return timeTeste;
-  }
 
   useEffect(() => {
       if (isActive && time > 0) {
           countdownTimeout = setTimeout(() => {
               setTime(time - 1);
           }, 1000)
+          
 
       } else if (isActive && time === 0) {
           setHasFinished(true);
           setIsActive(false);
           startNewChallenge();
-      }
+          AutoScroll();
+        }
+
   }, [isActive, time])
 
    return (
