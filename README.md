@@ -1,10 +1,13 @@
-# nLw4 projeto Move It
-
+# projeto Move It <small>projeto baseado na semana nlw 4 ministrada pela Rocketseat</small>
 <strong>Objetivo</strong>
 O projeto move.it visa a saúde do usuário, focado em pessoas que permanecem horas trabalhando em computadores, ou sentadas durante longos períodos de tempo.
 
 A cada ciclo de 25 minutos o sistema alertar o usuário a fazer uma pausa de suas tarefas. Monstrando qual tipo de atividade o usário deve realizar.
 A cada atividade realizada o usário ganha pontos definidos em XP aumentando seu nível.
+
+<p align="center"><h1>projeto versão - 1.0.0 </h1>
+  <a href="https://nlw4-move-it-charles-mrt.vercel.app/"><img src="https://i.ibb.co/cLb2KGt/Home-custom.jpg" alt="Home-custom" border="0"></a>
+</p>
 
 # tecnologias utilziadas
  - ReactJs, Next.Js, TypeScript, Css.
@@ -13,9 +16,6 @@ A cada atividade realizada o usário ganha pontos definidos em XP aumentando seu
   - alterado o layout do projeto e cores.
   - criação da logo.
 
-<p align="center"><h1>projeto versão - 1.0.0 </h1>
-  <a href="https://nlw4-move-it-charles-mrt.vercel.app/"><img src="https://i.ibb.co/cLb2KGt/Home-custom.jpg" alt="Home-custom" border="0"></a>
-</p>
 
 ## Scripts Disponíveis para rodar sua aplicação
 
