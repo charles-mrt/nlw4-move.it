@@ -22,7 +22,8 @@
 
 
 @media(max-width: 420px) {
-    .container {            
+    .container {    
+        flex:none;        
         padding: 0.5rem;   
         height: 140vh;
     } 
