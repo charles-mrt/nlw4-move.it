@@ -28,11 +28,11 @@ No diretório do projeto através do terminal, execute o comando abaixo para ins
 - <strong> <code>yarn add typescript @types/react @types/react-dom @types/node -D</code></strong>
 
 <strong> 2º </srtong>Rodar o projeto.
-No terminal dentro do diretório da aplicação, execute o comando:
+- No terminal dentro do diretório da aplicação, execute o comando:
 <strong> <code>yarn dev</code></strong>
 
 <strong> 3º </srtong>Executa o aplicativo no modo de desenvolvimento. \
-Abra [http://localhost:3000/] (http: // localhost: 3000) para visualizá-lo no navegador.
+- Abra [http://localhost:3000/] (http: // localhost: 3000) para visualizá-lo no navegador.
 
 
 A página será recarregada se você fizer edições. \
