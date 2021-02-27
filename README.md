@@ -7,7 +7,7 @@ projeto baseado na semana nlw 4 ministrada pela Rocketseat
 - A cada ciclo de 25 minutos o sistema alertar o usuário a fazer uma pausa de suas tarefas. Monstrando qual tipo de atividade o usário deve realizar.
 A cada atividade realizada o usário ganha pontos definidos em XP aumentando seu nível.
 
-<p align="center"><h1>projeto versão - 1.0.0 </h1>
+<p align="center"><h1>Versão - 1.0.0 </h1>
   <a href="https://nlw4-move-it-charles-mrt.vercel.app/"><img src="https://i.ibb.co/cLb2KGt/Home-custom.jpg" alt="Home-custom" border="0"></a>
 </p>
 
