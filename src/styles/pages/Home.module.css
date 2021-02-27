@@ -22,13 +22,13 @@
 
 
 @media(max-width: 420px) {
-    .container {    
-        flex:none;        
+    .container {                    
         padding: 0.5rem;   
         height: 140vh;
     } 
     .container section{        
-        gap: 1.25rem;        
+        gap: 1.25rem;  
+        flex:none;     
     } 
 }
   
