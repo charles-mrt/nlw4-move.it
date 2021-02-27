@@ -31,8 +31,8 @@ No diretório do projeto através do terminal, execute o comando abaixo para ins
 - No terminal dentro do diretório da aplicação, execute o comando:
 <strong> <code>yarn dev</code></strong>
 
-<strong> 3º </srtong>Executa o aplicativo no modo de desenvolvimento. \
-- Abra [http://localhost:3000/] (http: // localhost: 3000) para visualizá-lo no navegador.
+<strong> 3º </srtong>Executa o aplicativo no modo de desenvolvimento.\
+- Acesse seu navegador com o endereço: (http://localhost:3000) .
 
 
 A página será recarregada se você fizer edições. \
