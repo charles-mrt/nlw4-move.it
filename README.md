@@ -1,4 +1,5 @@
-# projeto Move It <small>projeto baseado na semana nlw 4 ministrada pela Rocketseat</small>
+# projeto Move It 
+<small>projeto baseado na semana nlw 4 ministrada pela Rocketseat</small>
 <strong>Objetivo</strong>
 O projeto move.it visa a saúde do usuário, focado em pessoas que permanecem horas trabalhando em computadores, ou sentadas durante longos períodos de tempo.
 
