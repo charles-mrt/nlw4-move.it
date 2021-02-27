@@ -20,7 +20,7 @@ O sistema desenvolvido tem por objeto alertar o usuário a fazer uma pausa de su
   <a href="https://nlw4-move-it-charles-mrt.vercel.app/"><img src="https://i.ibb.co/cLb2KGt/Home-custom.jpg" alt="Home-custom" border="0"></a>
 </p>
 
-## Scripts Disponíveis
+## Scripts Disponíveis para rodar sua aplicação
 
 <strong> 1º </srtong>Instalação do projeto 
 - Clone o projeto através da url: https://github.com/charles-mrt/nlw4-move.it.git
