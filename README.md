@@ -21,15 +21,18 @@ O sistema desenvolvido tem por objeto alertar o usuário a fazer uma pausa de su
 </p>
 
 ## Scripts Disponíveis
-Instalação do projeto 
+
+<strong> 1º </srtong>Instalação do projeto 
 - Clone o projeto através da url: https://github.com/charles-mrt/nlw4-move.it.git
 No diretório do projeto através do terminal, execute o comando abaixo para instalar o typescript e as dependencias do next:
 - <strong> <code>yarn add typescript @types/react @types/react-dom @types/node -D</code></strong>
 
+<strong> 2º </srtong>Rodar o projeto.
+No terminal dentro do diretório da aplicação, execute o comando:
+<strong> <code>yarn dev</code></strong>
 
-### `yarn dev`
-Executa o aplicativo no modo de desenvolvimento. \
-Abra [http: // localhost: 3000] (http: // localhost: 3000) para visualizá-lo no navegador.
+<strong> 3º </srtong>Executa o aplicativo no modo de desenvolvimento. \
+Abra [http://localhost:3000/] (http: // localhost: 3000) para visualizá-lo no navegador.
 
 
 A página será recarregada se você fizer edições. \
