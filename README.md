@@ -2,9 +2,9 @@
 projeto baseado na semana nlw 4 ministrada pela Rocketseat
 
 <strong>Objetivo</strong>
-O projeto move.it visa a saúde do usuário, focado em pessoas que permanecem horas trabalhando em computadores, ou sentadas durante longos períodos de tempo.
+- O projeto move.it visa a saúde do usuário, focado em pessoas que permanecem horas trabalhando em computadores, ou sentadas durante longos períodos de tempo.
 
-A cada ciclo de 25 minutos o sistema alertar o usuário a fazer uma pausa de suas tarefas. Monstrando qual tipo de atividade o usário deve realizar.
+- A cada ciclo de 25 minutos o sistema alertar o usuário a fazer uma pausa de suas tarefas. Monstrando qual tipo de atividade o usário deve realizar.
 A cada atividade realizada o usário ganha pontos definidos em XP aumentando seu nível.
 
 <p align="center"><h1>projeto versão - 1.0.0 </h1>
