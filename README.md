@@ -8,7 +8,7 @@ projeto baseado na semana nlw 4 ministrada pela Rocketseat
 A cada atividade realizada o usário ganha pontos definidos em XP aumentando seu nível.
 
 <p align="center"><h1>Versão - 1.0.0 </h1>
-  <a href="https://nlw4-move-it-charles-mrt.vercel.app/" arget="_blank">><img src="https://i.ibb.co/cLb2KGt/Home-custom.jpg" alt="Home-custom" border="0"></a>
+  <a href="https://nlw4-move-it-charles-mrt.vercel.app/" target="_blank"><img src="https://i.ibb.co/cLb2KGt/Home-custom.jpg" alt="Home-custom" border="0"></a>
 </p>
 <h1>Demo:  <a href="https://nlw4-move-it-charles-mrt.vercel.app/" target="_blank">Ir para o Move.it</a></h1>
 # tecnologias utilziadas
