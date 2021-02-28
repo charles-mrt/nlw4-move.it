@@ -6,7 +6,7 @@ import { FiChevronsRight, FiXCircle, FiCheck} from "react-icons/fi";
 
 export function Countdown() {
     
-    const {        
+    const {      
         minutes, 
         seconds, 
         hasFinished, 
@@ -18,7 +18,6 @@ export function Countdown() {
     /* split value to add in array['',''] if result is not decimal add 0 before to split */
     const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('')
     const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('')
-
 
     return (
         <div>
@@ -51,14 +50,16 @@ export function Countdown() {
             ) : (
                     <>
                       { isActive ? (
+                      
                         <button
                          type="button"
-                         className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
-                         onClick={resetCountdown}
+                         className={`${styles.countdownButton} ${styles.countdownButtonActive} `}
+                         onClick={resetCountdown}                                                                          
+                                                  
                         >
-                         Abandonar ciclo  <FiXCircle size={"2rem"}/> 
-                        </button>
-
+                         Abandonar ciclo  <FiXCircle size={"2rem"}/>
+                          <span className={`${styles.countdownButtonLoadBar}`} />
+                        </button>                        
                       ) : ( 
                         <button
                          type="button"
