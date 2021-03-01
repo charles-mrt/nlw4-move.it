@@ -19,6 +19,8 @@ interface HomeProps {
   level: number,
   currentExperience: number,
   challengesCompleted: number,
+  challengesFailed: number,
+  totalChallenge:number
 }
 
 export default function Home(props) {
@@ -27,6 +29,8 @@ export default function Home(props) {
       level={props.level}
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
+      challengesFailed={props.challengesFailed}
+      totalChallenge={props.totalChallenge}
     >
       <div className={styles.container}>      
         <Head> <title> Início | move.it </title></Head>
@@ -57,13 +61,15 @@ export default function Home(props) {
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
-  const { level, currentExperience, challengesCompleted } = ctx.req.cookies
+  const { level, currentExperience, challengesCompleted, challengesFailed} = ctx.req.cookies
 
   return {
     props: {
       level: Number(level),
       currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted)
+      challengesCompleted: Number(challengesCompleted),
+      challengesFailed: Number(challengesFailed),
+      totalChallenge: Number(challengesFailed)
     }
   }
 }

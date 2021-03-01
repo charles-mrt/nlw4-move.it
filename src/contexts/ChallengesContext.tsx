@@ -17,8 +17,9 @@ interface ChallengesContextData {
    currentExperience: number;
    experienceToNextLevel: number;
    challengesCompleted: number;
+   challengesFailed: number;
    activeChallenge: Challenge;
-   
+   totalChallenge:number;
    levelUp: () => void;
    startNewChallenge: () => void;
    resetChallenge: () => void;
@@ -33,6 +34,8 @@ interface ChallengesProviderProps {
    level: number,
    currentExperience: number,
    challengesCompleted: number,
+   challengesFailed: number,
+   totalChallenge: number,
 }
 
 
@@ -41,12 +44,13 @@ export const ChallengesContext = createContext({} as ChallengesContextData)
 
 export function ChallengesProvider({ children, ...rest }: ChallengesProviderProps) {
 
-   const [level, setLevel] = useState(rest.level ?? 1);
+   const [level, setLevel] = useState(rest.level ?? 0);
    const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0);
-   const [challengesCompleted, setchallengesCompleted] = useState(rest.challengesCompleted ?? 0);
+   const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0);
+   const [challengesFailed, setChallengesFailed] = useState(rest.challengesFailed ?? 0);   
+   let [totalChallenge] = useState(rest.totalChallenge ?? 0);
    const [activeChallenge, setActiveChallenge] = useState(null)
    const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false)
-
    /* calculation of the next level of experience based on potentiation 
       (level + 1 ) * level Dificult, square Power) 
    */
@@ -63,8 +67,10 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
       Cookies.set('level', String(level));
       Cookies.set('currentExperience', String(currentExperience))
       Cookies.set('challengesCompleted', String(challengesCompleted))
+      Cookies.set('challengesFailed', String(challengesFailed))
+      Cookies.set('totalChallenge', String(totalChallenge))
 
-   }, [level, currentExperience, challengesCompleted]);
+   }, [level, currentExperience, challengesCompleted, challengesFailed, totalChallenge]);
 
 
    function levelUp() {
@@ -91,15 +97,15 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
          })
       }
    }
-
    /* reset challenge if user failed */
    function resetChallenge() {
-      setActiveChallenge(null);
-   }
-
+      setActiveChallenge(null);                  
+      setChallengesFailed(challengesFailed + 1 ) 
+   }     
+  
    /* complete challenge  */
    function completeChallenge() {
-      if (!activeChallenge) {
+      if (!activeChallenge) {               
          return;
       }
 
@@ -113,22 +119,27 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
 
       setCurrentExperience(finalExperience);
       setActiveChallenge(null);
-      setchallengesCompleted(challengesCompleted + 1);
+      setChallengesCompleted(challengesCompleted + 1);        
    }
-
+   
+   totalChallenge =challengesCompleted + challengesFailed;
+  
+  
    return (
       <ChallengesContext.Provider
          value={{
             level,
             currentExperience,
             challengesCompleted,
+            challengesFailed,
             experienceToNextLevel,
-            levelUp,
-            startNewChallenge,
             activeChallenge,
+            totalChallenge,
+            levelUp,
+            startNewChallenge,         
             resetChallenge,
             completeChallenge,
-            closeLevelUpModal,
+            closeLevelUpModal,  
          }}
       >
          {children}

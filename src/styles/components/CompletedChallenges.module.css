@@ -1,26 +1,44 @@
-.completedChallengesContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    margin: 3.5rem 0;
-    padding-bottom: 1rem;
+.challengesContainer {
+    margin: 3.5rem 0;     
     border-bottom: 1px solid #d7d8da;
-
     font-weight: 500;
 }
 
-.completedChallengesContainer span:first-child {
+.completedChallengesContainer,
+.FailedchallengesContainer,
+.TotalchallengesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.completedChallengesContainer span:first-child,
+.FailedchallengesContainer span:first-child,
+.TotalchallengesContainer span:first-child {
     font-size: 1.25rem;
 }
 
-.completedChallengesContainer span:last-child {
+.completedChallengesContainer span:last-child,
+.FailedchallengesContainer span:last-child,
+.TotalchallengesContainer span:last-child {
     font-size: 1.5rem;
 }
+.completedChallengesContainer span:last-child {
+    color: #2ecc71;
+}
+.FailedchallengesContainer span:last-child {
+    color: #f98181;
+}
+.TotalchallengesContainer {      
+    margin: 0.3rem 0;
+}
 
+/*
 @media(max-width: 420px) {
     .completedChallengesContainer {        
         margin: 1rem 0 0.6rem 0;
         border: 0;
     } 
-}
+}*/
+
