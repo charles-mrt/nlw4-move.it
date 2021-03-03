@@ -28,7 +28,7 @@
 
 @media(max-width: 420px) {
    .chartChallenge details[open] {
-      height: 17rem;
+      height: 18rem;
   }
 }
 
