@@ -6,6 +6,7 @@ import challenges from '../../challenges.json';
 import { isMobile } from 'react-device-detect';
 import { LevelUpModal } from '../components/LevelUpmodal';
 
+
 interface Challenge {
    type: 'body' | 'eye';
    description: string;
@@ -35,7 +36,7 @@ interface ChallengesProviderProps {
    currentExperience: number,
    challengesCompleted: number,
    challengesFailed: number,
-   totalChallenge: number,
+   totalChallenge: number,   
 }
 
 
@@ -49,8 +50,9 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
    const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0);
    const [challengesFailed, setChallengesFailed] = useState(rest.challengesFailed ?? 0);   
    let [totalChallenge] = useState(rest.totalChallenge ?? 0);
-   const [activeChallenge, setActiveChallenge] = useState(null)
-   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false)
+   const [activeChallenge, setActiveChallenge] = useState(null);
+   const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
+  
    /* calculation of the next level of experience based on potentiation 
       (level + 1 ) * level Dificult, square Power) 
    */
@@ -81,6 +83,7 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
    function closeLevelUpModal(){
       setIsLevelUpModalOpen(false)
    }
+
 
    /* get challenges randomly */
    function startNewChallenge() {
@@ -122,7 +125,7 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
       setChallengesCompleted(challengesCompleted + 1);        
    }
    
-   totalChallenge =challengesCompleted + challengesFailed;
+   totalChallenge = challengesCompleted + challengesFailed;
   
   
    return (
@@ -139,12 +142,12 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
             startNewChallenge,         
             resetChallenge,
             completeChallenge,
-            closeLevelUpModal,  
+            closeLevelUpModal,            
          }}
       >
          {children}
          { isLevelUpModalOpen && <LevelUpModal /> }
-         
+              
       </ChallengesContext.Provider>
    );
 }
