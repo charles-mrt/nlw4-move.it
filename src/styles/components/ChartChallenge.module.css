@@ -26,6 +26,12 @@
   }
 }
 
+@media(max-width: 420px) {
+   .chartChallenge details[open] {
+      height: 17rem;
+  }
+}
+
 .chartChallenge details summary {
    background: var(--background);
    padding: 0.3rem;
