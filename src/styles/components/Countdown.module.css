@@ -82,7 +82,7 @@
     bottom: 0;
     background: var(--green);
 
-    animation: loadBar 23s linear normal;
+    animation: loadBar 3s linear normal;
 }
 
 @keyframes loadBar {
