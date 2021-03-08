@@ -26,7 +26,7 @@
 @media(max-width: 420px) {
     .container {                    
         padding: 0.5rem;   
-        height: 140vh;
+        height: auto;
     } 
     .container section{        
         gap: 1.25rem;  
