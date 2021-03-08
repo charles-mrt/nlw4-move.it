@@ -14,7 +14,7 @@
 .experienceBar span {
     font-size: 1rem;
     padding: 0 0.5rem 0 0.5rem;
-    color: var(--white);
+    color: var(--dark-white);
 }
 
 .experienceBar > div {
@@ -31,6 +31,8 @@
     border-radius: 4px;
     background: var(--green);
     transition: 2s;
+    
+    max-width: 100%;
 }
 
 span.currentExperience {
@@ -42,7 +44,7 @@ span.currentExperience {
 
     font-weight: bold;
     text-align: center;
-    color: var(--white);  
+    color: var(--dark-white);  
     background: var(--blue);
   
 }

@@ -1,82 +1,67 @@
+.content {    
+   height: 100vh;
+   max-width: 992px;
+   margin: 0 auto;
+   padding: 0 1.4rem;
+
+   display: flex;
+   flex-direction: column;
+
+   background-color:var(--background-component);       
+}
 
 .chartChallenge {
    background:var(--background-dark); 
-   color:var(--white);
-   border-radius: 5px;
-   margin-top: 5px;
-}
-
-.chartChallenge details {
-   transition: height 1s ease;
-   overflow: hidden;
-   cursor: pointer;
-}
-
-.chartChallenge details:not( [open] ) {
-    height: 1.5rem;
-}
-
-.chartChallenge details[open] {
-    height: 15rem;
-}
-
-@media(max-width:700px) {
-   .chartChallenge details[open] {
-      height: 17rem;
-  }
-}
-
-@media(max-width: 420px) {
-   .chartChallenge details[open] {
-      height: 19rem;
-  }
-}
-
-.chartChallenge details summary {
-   background: var(--background);
-   padding: 0.3rem;
-   color: var(--title);
+   color:var(--dark-white);
+   border-radius: 5px;  
+   width: 100%;
 }
 
 .chartChallenge header {
    font-weight: 600;
-   font-size: 0.8rem;
+   font-size: 1rem;
    
-   padding: 5px 0 5px;
-   border-bottom: 1px solid var(--text);
+   padding: 1rem;
    
    display: flex;
+   justify-content: space-between;
+}
+.chartChallenge header span {
+   display: flex;
    align-items: center;
-   justify-content: center;
 }
 .chartChallenge header svg {
    margin-left: 4px;
-   font-size: 1rem;
+   font-size: 1.4rem;
 }
 
 .chartChallenge section   {
-   margin: 0 5px;
-   gap: 10px;
+   margin: 0.8rem;
 }
 .chartChallenge section div  {
    display: grid;
+}
+
+.chartChallenge section main  {
+   background: #2b2e3d;
+   border-radius: 5px;
+   padding: 1rem;
 }
 
 .chartChallenge section div strong {
    font-size: 0.8rem;
    font-weight: normal;
    letter-spacing: 1px;
-   margin: 0 0 0.2rem;
+   margin: 0.5rem 0 0.2rem 0;
 }
-
 .chartChallenge section div strong svg{
    color: #bcbcbc;
 }
 
 .chartChallenge section div span {
-   height: 10px;
+   height: 1.5rem;
    width: 1%;
-   margin-bottom: 0.5rem;
+   margin-bottom: 0.2rem;
 }
 
 .totalChallenge span {
@@ -92,18 +77,103 @@
 .challengesFailed span {
    background: rgb(195,34,99);
    background: linear-gradient(80deg, rgba(223,57,57,1) 0%, rgba(195,34,99,1) 100%);
+   
 }
 
 .challengesReport {
-   border-top: 1px solid var(--text);
-   padding: 5px;
-   font-size: 0.9rem;
+   padding: 15px 0 15px;
+}
+
+.challengesReport h5 {
+   font-size: 1rem;
    font-weight: normal;
-   text-align: center;
+   
+   padding: 1.5rem;
+   display: grid;
+   justify-content: center;
+ 
+}.challengesReport h5 svg {
+   font-size: 2rem;
+   width: 100%;
 }
 
 .challengesReport svg {
    margin-right: 5px;
-   font-size: 1rem;
+   font-size: 1.2rem;
+   text-align: center;
 }
 
+.challengesReport ul {
+   list-style: none;
+   display: flex;
+   justify-content: space-between; 
+   align-items: center;  
+   
+}
+.challengesReport ul li {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   
+   border-radius: 5px;   
+   width: 100%;
+   height: 3.5rem;
+
+   color:var(--white);
+}
+
+.challengesReport ul li h4 {
+   padding: 0.5rem; 
+   
+}
+
+
+.challengesReport li.total {
+   background: rgb(34,195,147);
+   background: linear-gradient(0deg, rgb(46, 158, 250) 0%, rgb(171, 58, 246) 100%); 
+}
+.challengesReport li.completed {
+   margin:0 5px 0 10px;
+   background: rgb(34,195,161);
+   background: linear-gradient(0deg, rgba(34,195,161,1) 0%, rgba(57,223,140,1) 100%);   
+}
+.challengesReport li.failed {
+   margin:0 10px 0 5px;
+   background: rgb(195,34,99);
+   background: linear-gradient(0deg, rgba(223,57,57,1) 0%, rgba(195,34,99,1) 100%);   
+}
+.challengesReport li.level {
+   background: rgb(34,195,147);
+   background: linear-gradient(0deg, rgb(169, 34, 195) 0%,  rgba(112, 57, 223) 100%);
+
+}
+
+@media(max-width: 800px) {
+   .content {
+      position: relative;
+      padding: 0;
+   }
+
+   .challengesReport ul {      
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      
+   }  
+   .challengesReport ul li {
+      width: 100%;
+      margin: 0!important;
+   }
+}
+@media(max-width: 420px) {
+   .challengesReport ul {      
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+
+   }  
+   .challengesReport ul li {
+      width: 100%;
+      margin: 0!important;
+   }
+}

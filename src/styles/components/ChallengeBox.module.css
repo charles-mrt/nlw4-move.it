@@ -2,7 +2,7 @@
    height: 100%;
    
    background: var(--background-dark);
-   color: var(--white);
+   color: var(--dark-white);
 
    border-radius: 5px;
    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.4);
@@ -97,10 +97,10 @@
 }
 
 .challengeActive footer button.challengeFailedButton {
-   background: var(--red);
+   background: linear-gradient(0deg, var(--red-dark) 0%, var(--red-light) 100%);
 }
 .challengeActive footer button.challengeSucceededButton{
-   background: var(--green-light);
+   background: linear-gradient(0deg, var(--green-dark) 0%, var(--green-light) 100%);
 }
 
 .challengeActive footer button:hover {
