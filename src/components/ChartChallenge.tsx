@@ -19,7 +19,7 @@ import { MainLogo } from './MainLogo';
 
 export function CreatesChartChallenge() {
 
-    const { challengesCompleted, challengesFailed, totalChallenge } = useContext(ChallengesContext);
+    const { challengesCompleted, challengesFailed, totalChallenge, level} = useContext(ChallengesContext);
 
     return (
         <>
@@ -75,22 +75,22 @@ export function CreatesChartChallenge() {
                             <ul>
                                 <li className={styles.total}> 
                                     <h4><FiUserCheck /> Total</h4>
-                                    <h4>2</h4>
+                                    <h4>{totalChallenge}</h4>
                                 </li>
 
                                 <li className={styles.completed}> 
                                     <h4><FiUserPlus /> Completos</h4>
-                                    <h4>1</h4>
+                                    <h4>{challengesCompleted}</h4>
                                 </li>
 
                                 <li className={styles.failed}>   
                                     <h4><FiUserMinus /> Incompletos</h4>
-                                    <h4>1</h4>
+                                    <h4>{challengesFailed}</h4>
                                 </li>
 
                                 <li className={styles.level}>  
                                     <h4><FiArrowUp /> Level</h4>
-                                    <h4>1</h4>
+                                    <h4>{level}</h4>
                                 </li>
                             </ul>
                         </div>
