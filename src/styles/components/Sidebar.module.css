@@ -1,0 +1,51 @@
+.appSidebar {
+   background: var(--background-dark);
+   background: linear-gradient(1deg, rgb(45, 56, 77) 0%, rgb(0, 0, 0) 100%);
+   width: 4rem;
+   min-height:3rem;
+   border-right: 1px solid #14172a;
+
+   position: fixed;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   z-index: 1;
+   
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;  
+
+}
+
+.appSidebar ul {
+   list-style: none;      
+}
+
+.appSidebar ul li {
+   font-size: 2rem;   
+}
+
+.appSidebar ul li a {
+   transition: 0.3s;
+}
+.appSidebar ul li a:hover {
+   color: #3f51b5;
+}
+
+@media(max-width:1060px) {
+   
+   .appSidebar {
+     position: inherit;
+     width: 100%; 
+     margin-bottom: 1rem;
+   
+   }
+
+   .appSidebar ul li { 
+      display: inline-flex;
+   }
+   .appSidebar ul li a {
+      display: flex;      
+   }
+}
