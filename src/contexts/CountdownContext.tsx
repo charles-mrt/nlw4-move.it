@@ -3,7 +3,6 @@ import { ChallengesContext } from './ChallengesContext';
 
 
 interface CountDownContextData {
-   startTime: number,
    minutes: number,
    seconds: number,
    hasFinished: boolean,
@@ -26,7 +25,7 @@ export function CountdownProvider( {children} : CountDownProviderProps ) {
 
    // StartTime 25 minutes = 25
     // StartTime 3 seconds = 0.05
-    const startTime = 0.05 * 60; 
+    const startTime =  0.05 * 60; 
     const { startNewChallenge } = useContext(ChallengesContext);
 
     const [time, setTime] = useState(startTime);
@@ -74,7 +73,6 @@ export function CountdownProvider( {children} : CountDownProviderProps ) {
 
    return (
       <CountDownContext.Provider value={{
-         startTime,
          minutes,
          seconds,
          hasFinished,
