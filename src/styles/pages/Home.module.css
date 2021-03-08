@@ -34,7 +34,7 @@
     } 
 }
 
-@media (orientation: landscape) {
+@media (max-width: 420px ) and (orientation: landscape) {
     .container {                               
         height: auto;
     } 
