@@ -12,7 +12,8 @@ import { Profile } from "../components/Profile";
 import { CompletedChallenges } from "../components/CompletedChallenges";
 import { Countdown } from "../components/Countdown";
 import { ChallengeBox } from "../components/ChallengeBox";
-import { CreatesChartChallenge } from "../components/ChartChallenge";
+import { Sidebar } from "../components/Sidebar";
+
 
 
 interface HomeProps {
@@ -32,28 +33,30 @@ export default function Home(props) {
       challengesFailed={props.challengesFailed}
       totalChallenge={props.totalChallenge}
     >
+        
       <div className={styles.container}>      
         <Head> <title> Início | move.it </title></Head>
+        
+        <Sidebar />
+        <div className={styles.wrap}> 
+          <MainLogo />
+          <ExperienceBar />
+        
+          <CountdownProvider>
+            <section>          
+              <div>              
+                <Profile />             
+              
+                <CompletedChallenges />            
+                <Countdown />
+              </div>
 
-        <MainLogo />
-        <ExperienceBar />
-
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile />
-              <CreatesChartChallenge />
-              <CompletedChallenges />
-             
-              <Countdown />
-            </div>
-
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
-
+              <div>
+                <ChallengeBox />
+              </div>
+            </section>
+          </CountdownProvider>
+        </div>
       </div>
     </ChallengesProvider>
   )
