@@ -1,5 +1,5 @@
+import Head from 'next/head';
 import { GetServerSideProps } from 'next';
-
 import { ChallengesProvider } from '../contexts/ChallengesContext';
 import { CreatesChartChallenge } from "../components/ChartChallenge";
 
@@ -24,6 +24,7 @@ interface HomeProps {
       totalChallenge={props.totalChallenge}
     >
        <div>
+        <Head> <title> dashboard | move.it </title></Head>
           <CreatesChartChallenge />
        </div>
 
