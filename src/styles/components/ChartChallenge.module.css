@@ -91,6 +91,8 @@
    padding: 1.5rem;
    display: grid;
    justify-content: center;
+
+   text-align: center;
  
 }.challengesReport h5 svg {
    font-size: 2rem;
