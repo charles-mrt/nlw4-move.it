@@ -1,8 +1,6 @@
 import { useContext } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
 
-//import { CreatesChartChallenge } from '../components/ChartChallenge';
-
 import styles from '../styles/components/CompletedChallenges.module.css';
 
 
