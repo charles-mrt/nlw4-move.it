@@ -4,10 +4,12 @@
    justify-content: center;
    align-items: center;  
 }
+.pageLogin header {
+   display: flex;
+   justify-content: center;
+}
 .pageLogin header img{ 
-   margin: auto;
-   padding: 0;
-   width: 11rem;   
+   width: 11rem;  
 }
 
 .pageLogin main {
