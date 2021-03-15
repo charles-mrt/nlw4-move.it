@@ -48,7 +48,7 @@ export const ChallengesContext = createContext({} as ChallengesContextData)
 
 
 export function ChallengesProvider({ children, ...rest }: ChallengesProviderProps) {
-   let [userName, setUserName] = useState(rest.userName ?? "x");
+   let [userName, setUserName] = useState(rest.userName ?? "");
    const [level, setLevel] = useState(rest.level ?? 1);
    const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0);
    const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0);
