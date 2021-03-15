@@ -4,7 +4,7 @@ import { ChallengesProvider } from '../contexts/ChallengesContext';
 import { Login } from "../components/Login";
 
 interface HomeProps {
-   userName: String, 
+   userName: string, 
  }
  export default function userLogin(props) {
    
