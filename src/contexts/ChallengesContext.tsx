@@ -11,9 +11,11 @@ interface Challenge {
    type: 'body' | 'eye';
    description: string;
    amount: number;
+  
 }
 
 interface ChallengesContextData {
+   userName: String;
    level: number;
    currentExperience: number;
    experienceToNextLevel: number;
@@ -26,17 +28,19 @@ interface ChallengesContextData {
    resetChallenge: () => void;
    completeChallenge: () => void;
    closeLevelUpModal: () => void;
+   getUserName:(arg:String) => void;
 }
 
 
 /* component typing */
 interface ChallengesProviderProps {
+   userName: String;
    children: ReactNode;
    level: number,
    currentExperience: number,
    challengesCompleted: number,
    challengesFailed: number,
-   totalChallenge: number,   
+   totalChallenge: number,      
 }
 
 
@@ -44,7 +48,7 @@ export const ChallengesContext = createContext({} as ChallengesContextData)
 
 
 export function ChallengesProvider({ children, ...rest }: ChallengesProviderProps) {
-
+   let [userName, setUserName] = useState(rest.userName ?? "x");
    const [level, setLevel] = useState(rest.level ?? 1);
    const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0);
    const [challengesCompleted, setChallengesCompleted] = useState(rest.challengesCompleted ?? 0);
@@ -52,12 +56,13 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
    let [totalChallenge] = useState(rest.totalChallenge ?? 0);
    const [activeChallenge, setActiveChallenge] = useState(null);
    const [isLevelUpModalOpen, setIsLevelUpModalOpen] = useState(false);
-  
+
    /* calculation of the next level of experience based on potentiation 
       (level + 1 ) * level Dificult, square Power) 
    */
    const experienceToNextLevel = Math.pow((level + 1) * 4, 2)
 
+   
 
    useEffect(() => {
       Notification.requestPermission();
@@ -65,15 +70,20 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
 
 
    useEffect(() => {
-
+      Cookies.set('userName', String(userName));
       Cookies.set('level', String(level));
       Cookies.set('currentExperience', String(currentExperience))
       Cookies.set('challengesCompleted', String(challengesCompleted))
       Cookies.set('challengesFailed', String(challengesFailed))
       Cookies.set('totalChallenge', String(totalChallenge))
 
-   }, [level, currentExperience, challengesCompleted, challengesFailed, totalChallenge]);
+   }, [level, currentExperience, challengesCompleted, challengesFailed, totalChallenge, userName]);
 
+      
+   /* wait for a string as a reference */
+   function getUserName(Name) {                        
+      setUserName(userName = Name);                                             
+   }
 
    function levelUp() {
       setLevel(level + 1);
@@ -88,8 +98,7 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
    /* get challenges randomly */
    function startNewChallenge() {
       const randomChallengesIndex = Math.floor(Math.random() * challenges.length)
-      const challenge = challenges[randomChallengesIndex]
-
+      const challenge = challenges[randomChallengesIndex]      
       setActiveChallenge(challenge)
 
       new Audio('/notification.mp3').play();
@@ -103,7 +112,7 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
    /* reset challenge if user failed */
    function resetChallenge() {
       setActiveChallenge(null);                  
-      setChallengesFailed(challengesFailed + 1 ) 
+      setChallengesFailed(challengesFailed + 1 )       
    }     
   
    /* complete challenge  */
@@ -119,18 +128,18 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
          finalExperience = finalExperience - experienceToNextLevel;
          levelUp();
       }
-
       setCurrentExperience(finalExperience);
       setActiveChallenge(null);
       setChallengesCompleted(challengesCompleted + 1);        
    }
    
    totalChallenge = challengesCompleted + challengesFailed;
-  
+   
   
    return (
       <ChallengesContext.Provider
          value={{
+            userName,
             level,
             currentExperience,
             challengesCompleted,
@@ -142,11 +151,13 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
             startNewChallenge,         
             resetChallenge,
             completeChallenge,
-            closeLevelUpModal,            
+            closeLevelUpModal,  
+            getUserName,            
          }}
       >
          {children}
          { isLevelUpModalOpen && <LevelUpModal /> }
+         
               
       </ChallengesContext.Provider>
    );
