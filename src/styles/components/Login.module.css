@@ -2,11 +2,13 @@
    height: 100vh;
    display: grid;
    justify-content: center;
-   align-items: center;  
+   align-items: inherit; 
+   gap: 4rem; 
 }
 .pageLogin header {
    display: flex;
    justify-content: center;
+   align-items: flex-end;
 }
 .pageLogin header img{ 
    width: 11rem;  
