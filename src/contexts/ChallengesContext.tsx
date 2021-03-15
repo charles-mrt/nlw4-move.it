@@ -15,7 +15,7 @@ interface Challenge {
 }
 
 interface ChallengesContextData {
-   userName: String;
+   userName: string;
    level: number;
    currentExperience: number;
    experienceToNextLevel: number;
@@ -28,13 +28,13 @@ interface ChallengesContextData {
    resetChallenge: () => void;
    completeChallenge: () => void;
    closeLevelUpModal: () => void;
-   getUserName:(arg:String) => void;
+   getUserName:(arg:string) => void;
 }
 
 
 /* component typing */
 interface ChallengesProviderProps {
-   userName: String;
+   userName: string;
    children: ReactNode;
    level: number,
    currentExperience: number,
