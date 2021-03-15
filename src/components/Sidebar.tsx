@@ -1,6 +1,6 @@
 import styles from '../styles/components/Sidebar.module.css';
 
-import {SidebarData} from '../components/SidebarData';
+import {SidebarData} from '../utils/SidebarData';
 
 import Link from 'next/link';
 
