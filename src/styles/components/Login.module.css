@@ -1,0 +1,110 @@
+.pageLogin {
+   height: 100vh;
+   display: grid;
+   justify-content: center;
+   align-items: center;  
+}
+.pageLogin header img{ 
+   margin: auto;
+   padding: 0;
+   width: 11rem;   
+}
+
+.pageLogin main {
+   font-family: "Inter";
+   background-color: var(--background-dark);
+   border-radius: 5px;
+
+   margin: 0  0.5rem 0.5rem 0.5rem ;
+   max-width: 20rem;   
+   display: grid;           
+}
+
+.pageLogin main > svg {
+   margin: -40px auto 30px;           
+   height: 75px;
+   width: 75px;
+   border: 3px solid var(--background);   
+   background: var(--background-dark);
+
+   border-radius: 50%;
+   padding: 1px;
+   transition: 0.4s;
+   z-index: 10;
+} 
+
+.pageLogin form {
+   border-radius: 5px;
+   padding: 1rem;   
+   margin:0.2rem 1rem 1rem;
+   background: var(--background-component);
+}
+
+.pageLogin fieldset {
+   border: 0; 
+   text-align: center;
+   
+}
+.pageLogin form input {
+   margin-bottom: 1rem;
+}
+
+.pageLogin form input[type="text"] {
+   width: 100%;
+   height: 3.5rem;
+
+   color: var(--wite);   
+   background: var(--background-component);
+   border:0;
+   border-bottom: 3px solid #3f51b5;   
+
+   font-size: 1rem;
+   letter-spacing: 1px;
+   transition: 0.3s;
+}
+.pageLogin form input:focus {
+   outline: none; 
+   border-color: var(--green);
+} 
+
+.pageLogin form button {   
+   width: 100%;
+   height: 3.5rem;
+
+   display: flex;   
+   align-items: center;
+   justify-content: center;
+   
+   background: linear-gradient(0deg,#a922c3,#7039df);
+   color: var(--white);
+ 
+   border: 0;
+   border-radius: 5px;
+
+   font-weight: 400;
+   font-size: 1.2rem;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+
+}
+.pageLogin form button svg {
+   margin-left: 10px;
+      
+   transition: 0.3s;
+}
+.pageLogin form button:hover svg {
+   margin-left: 20px;
+}
+
+/* Orientation Lock*/
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+   .pageLogin {
+     transform: rotate(-90deg);
+     transform-origin: left top;
+     width: 100vh;
+     overflow-x: hidden;
+     position: absolute;
+     top: 100%;
+     left: 0;
+   }
+ }
