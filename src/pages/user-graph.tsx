@@ -5,6 +5,7 @@ import { CreatesChartChallenge } from "../components/ChartChallenge";
 
 
 interface HomeProps {
+   userName: String,
    level: number,
    currentExperience: number,
    challengesCompleted: number,
@@ -17,6 +18,7 @@ interface HomeProps {
 
    return (
       <ChallengesProvider
+      userName={props.userName}
       level={props.level}
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
@@ -36,10 +38,11 @@ interface HomeProps {
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
-   const { level, currentExperience, challengesCompleted, challengesFailed} = ctx.req.cookies
+   const { level, currentExperience, challengesCompleted, challengesFailed, userName} = ctx.req.cookies
  
    return {
      props: {
+       userName:String(userName),
        level: Number(level),
        currentExperience: Number(currentExperience),
        challengesCompleted: Number(challengesCompleted),

@@ -19,7 +19,7 @@ import { MainLogo } from './MainLogo';
 
 export function CreatesChartChallenge() {
 
-    const { challengesCompleted, challengesFailed, totalChallenge, level} = useContext(ChallengesContext);
+    const { challengesCompleted, challengesFailed, totalChallenge, level, userName} = useContext(ChallengesContext);
 
     return (
         <>
@@ -27,11 +27,10 @@ export function CreatesChartChallenge() {
         
             <div className={styles.content}><MainLogo />
                 <div className={styles.chartChallenge}>
-                
                     <section>
                         <header>                        
                             <span>Dados dos desafios <FiBarChart2 /></span>
-                            <span> Charles Martins <FiUser /></span>
+                            <span>{userName} <FiUser /></span>
                         </header>
                         <main>
                             <div className={styles.totalChallenge}>
