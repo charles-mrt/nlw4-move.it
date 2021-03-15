@@ -1,11 +1,11 @@
 import {} from "react-icons/fi";
-import {FiBarChart2, FiWatch } from "react-icons/fi";
+import {FiBarChart2, FiWatch, FiUser} from "react-icons/fi";
 
 
 export const SidebarData = [
    {
       title: "Home",
-      path:"/",
+      path:"/moveit",
       icon:<FiWatch />,
       cName:"nav-text"
    },
@@ -15,5 +15,13 @@ export const SidebarData = [
       path:"/user-graph",
       icon:< FiBarChart2 />,
       cName:"nav-text"
+   },
+
+    {
+      title:"alterar nome",
+      path:"/",
+      icon:<FiUser />,
+      cName:"nav-text",
+      target:"_blank"      
    }
 ]
