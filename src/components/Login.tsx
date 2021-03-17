@@ -24,8 +24,8 @@ export function Login() {
    return (
 
       <div className={styles.pageLogin}>
-         <header><img src="/assets/logo.svg" alt="MoveIT"/></header>
          <div>
+            <header><img src="/assets/logo.svg" alt="MoveIT" className={styles.logo}/></header>
             <main>
                {<FiUser color={color} style={{ boxShadow: `inset 0px 0px 8px 0px${color}` }} />}
 
