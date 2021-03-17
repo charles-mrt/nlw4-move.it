@@ -1,17 +1,16 @@
 .pageLogin {
    height: 100vh;
-   display: grid;
-   justify-content: center;
-   align-items: inherit; 
-   gap: 4rem; 
-}
-.pageLogin header {
    display: flex;
    justify-content: center;
-   align-items: flex-end;
+   align-items: center;  
+}
+
+.pageLogin header {   
+   text-align: center;
+   height: 6rem;      
 }
 .pageLogin header img{ 
-   width: 11rem;  
+  max-width: 50%;  
 }
 
 .pageLogin main {
@@ -21,7 +20,7 @@
 
    margin: 0  0.5rem 0.5rem 0.5rem ;
    max-width: 20rem;   
-   display: grid;           
+   display: grid;       
 }
 
 .pageLogin main > svg {
