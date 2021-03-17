@@ -24,10 +24,12 @@
 
 .appSidebar ul li {
    font-size: 2rem;   
+   padding: 0.5rem;
 }
 
 .appSidebar ul li a {
    transition: 0.3s;
+   
 }
 .appSidebar ul li a:hover {
    color: #3f51b5;
