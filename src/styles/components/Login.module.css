@@ -6,8 +6,7 @@
 }
 
 .pageLogin header {   
-   text-align: center;
-   height: 6rem;      
+   text-align: center;         
 }
 .pageLogin header img{ 
   max-width: 50%;  
@@ -18,7 +17,7 @@
    background-color: var(--background-dark);
    border-radius: 5px;
 
-   margin: 0  0.5rem 0.5rem 0.5rem ;
+   margin: 3.5rem  0.5rem 0.5rem 0.5rem ;
    max-width: 20rem;   
    display: grid;       
 }
