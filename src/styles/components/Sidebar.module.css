@@ -24,15 +24,22 @@
 
 .appSidebar ul li {
    font-size: 2rem;   
-   padding: 0.5rem;
+   margin: 0.5rem;
 }
 
 .appSidebar ul li a {
-   transition: 0.3s;
+   transition: 0.3s; 
+      
+   border-radius: 50%;
+   padding: 0.5rem;
    
+   display: flex;
+   justify-content: center;
+   align-self: center;
 }
 .appSidebar ul li a:hover {
    color: #3f51b5;
+   background-color: var(--background-dark);
 }
 
 @media(max-width:1060px) {
@@ -51,3 +58,4 @@
       display: flex;      
    }
 }
+
