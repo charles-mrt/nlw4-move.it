@@ -99,6 +99,7 @@
    font-size: 1.5rem;
    margin-left: 0.5rem;
 }
+
 .challengeActive footer button.challengeFailedButton {
    background: linear-gradient(0deg, var(--red-dark) 0%, var(--red-light) 100%);
 }
