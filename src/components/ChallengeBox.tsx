@@ -4,7 +4,7 @@ import { ChallengesContext } from '../contexts/ChallengesContext';
 import { CountDownContext } from '../contexts/CountdownContext';
 
 import styles from '../styles/components/ChallengeBox.module.css'
-
+import {FiFrown, FiSmile} from "react-icons/fi";
 const message = {
    startMessage: " Go go go !!! Finaliza o ciclo para receber um desafio :)",
    messageSucceeded:"Parabéns! E aí preparado para mais uma conquista? Iniciei um novo ciclo!",
@@ -53,7 +53,7 @@ export function ChallengeBox() {
                      className={styles.challengeFailedButton}
                      onClick={handleChallengeFailed}                     
                   >
-                     falhei :(
+                     falhei <FiFrown />
                   </button>
                   
                   <button
@@ -61,7 +61,7 @@ export function ChallengeBox() {
                      className={styles.challengeSucceededButton}
                      onClick={handleChallengeSucceeded}
                   >
-                     Completei :)
+                     Completei <FiSmile />
                   </button>
 
                </footer>
@@ -82,3 +82,4 @@ export function ChallengeBox() {
    );
 
 }
+
