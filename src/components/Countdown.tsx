@@ -9,7 +9,7 @@ export function Countdown() {
 
     const {       
         demoTime,
-        startTime,
+        fullTime,
         checked,
         lockToggle,
         minutes,
@@ -88,9 +88,9 @@ export function Countdown() {
                                             left: 0;
                                             bottom: 0;
                                             background: var(--green);
-                                            animation: loadBar ${checked ? demoTime : startTime }s linear normal;
+                                            animation: loadBar ${ checked ? demoTime : fullTime }s linear normal;
                                             
-                                            @keyframes loadBar { 0% {width: 0%;} 100% {width: 100%;}}`
+                                            @keyframes loadBar { 0% {width: 0%;} 100% {width: 100%;} }`
                                         }
                                     </style>
                                 </span>

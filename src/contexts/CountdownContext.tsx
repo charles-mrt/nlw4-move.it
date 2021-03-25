@@ -4,7 +4,7 @@ import { ChallengesContext } from './ChallengesContext';
 
 interface CountDownContextData {
    demoTime: number,
-   startTime:number,
+   fullTime:number,
    checked: boolean,
    lockToggle: boolean,
    minutes: number,
@@ -31,13 +31,13 @@ let countdownTimeout: NodeJS.Timeout;
 export function CountdownProvider({ children }: CountDownProviderProps) {
 
    // demoTime 3 seconds = 0.05
-   // StartTime 25 minutes = 25
+   // fullTime 25 minutes = 25
 
    const demoTime = 0.05 * 60
-   const startTime = 25 * 60;
+   const fullTime = 25 * 60;
    const { startNewChallenge } = useContext(ChallengesContext);
 
-   const [time, setTime] = useState(startTime);
+   const [time, setTime] = useState(fullTime);
    const [isActive, setIsActive] = useState(false);
    const [hasFinished, setHasFinished] = useState(false);
    const [toggleTimeDemo, setToggleTimeDemo] = useState(false);
@@ -61,16 +61,16 @@ export function CountdownProvider({ children }: CountDownProviderProps) {
    }
 
    useEffect(() => {
-      if (toggleTimeDemo && time === startTime) {
+      if (toggleTimeDemo && time === fullTime) {
          setTime(demoTime)
          setToggleTimeDemo(false)
 
       } else if (toggleTimeDemo) {
-         setTime(startTime)
+         setTime(fullTime)
          setToggleTimeDemo(false)
       }
 
-   }, [toggleTimeDemo, time, startTime])
+   }, [toggleTimeDemo, time, fullTime])
 
    
    function startCountdown() {
@@ -88,7 +88,7 @@ export function CountdownProvider({ children }: CountDownProviderProps) {
    function resetCountdown() {
       clearTimeout(countdownTimeout)
       setIsActive(false);
-      setTime(startTime);
+      setTime(fullTime);
       setHasFinished(false)
       setLockToggle(false)
       setChecked(false)
@@ -113,7 +113,7 @@ export function CountdownProvider({ children }: CountDownProviderProps) {
    return (
       <CountDownContext.Provider value={{
          demoTime,
-         startTime,
+         fullTime,
          checked,
          lockToggle,
          minutes,
