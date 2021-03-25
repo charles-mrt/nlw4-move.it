@@ -1,3 +1,16 @@
+.countdown header {
+    margin-bottom: 0.5rem;    
+}
+.countdown header p{
+    display: flex;    
+    align-items: center;
+    margin-bottom: 0.5rem;        
+}
+.countdown header p svg{
+    margin-right: 0.4rem;   
+}
+
+
 .countdownContainer {
     display: flex;
     align-items: center;
@@ -73,27 +86,6 @@
 .countdownButtonActive {   
     position: relative;
 }
-
-.countdownButtonLoadBar {
-    content: "";
-    position: absolute;
-    height: 0.2rem;
-    left: 0;
-    bottom: 0;
-    background: var(--green);
-
-    animation: loadBar 3s linear normal;
-}
-
-@keyframes loadBar {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
 
 
 .countdownButtonActive:hover svg :not(:disabled) {
